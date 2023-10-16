@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { IoPersonAdd } from "react-icons/io5";
 import { useState } from "react";
-import ReCaptcha from "react-google-recaptcha";
+//import ReCaptcha from "react-google-recaptcha";
 
 import logo1 from "../img/Logo1.png";
 
@@ -14,7 +14,7 @@ function RegisterPage() {
     const { signup, isAuthenticated, errors: registerErrors } = useAuth();
     const navigate = useNavigate();
 
-    const [captchaValue, setCaptchaValue] = useState(null);
+    //const [captchaValue, setCaptchaValue] = useState(null);
 
     useEffect(() => {
         if (isAuthenticated) navigate('/products');
@@ -83,17 +83,17 @@ function RegisterPage() {
                         <button
                             className="w-full bg-transparent hover:bg-slate-600 text-sky-500 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent flex items-center justify-center filter grayscale"
                             type="submit"
-                            disabled={!captchaValue}
+                        // disabled={!captchaValue}
                         >
                             Registrar
                             <IoPersonAdd size={30} className="ml-2" />
                         </button>
                     </div>
-                    <ReCaptcha
+                    {/* <ReCaptcha
                         sitekey="6LcTNXkoAAAAAHrOzwQbZzwLf88c5V4vVrKmOjzI"
                         onChange={(value) => setCaptchaValue(value)}
                         style={{ maxWidth: "100%" }}
-                    />
+                    /> */}
 
                 </form>
                 <p className="flex gap-x-2 justify-between pt-5 mt-5 font-bold">

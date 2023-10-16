@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { IoLogIn, IoPersonAdd, IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
-import ReCaptcha from "react-google-recaptcha";
+//import ReCaptcha from "react-google-recaptcha";
 
 // Importa la imagen que desees utilizar
 import logo1 from "../img/Logo1.png";
@@ -13,7 +13,7 @@ function LoginPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signin, isAuthenticated, errors: signInErrors } = useAuth();
     const [passwordShown, setPasswordShown] = useState(false);
-    const [capchaValue, setCapchaValue] = useState(null);
+    //const [capchaValue, setCapchaValue] = useState(null);
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
