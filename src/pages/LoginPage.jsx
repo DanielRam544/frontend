@@ -86,16 +86,17 @@ function LoginPage() {
                     <div>
                         <button
                             className="w-full bg-transparent hover:bg-slate-600 text-sky-500 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent flex items-center justify-center filter grayscale"
-                            type="submit" disabled={!capchaValue}>
+                            type="submit">
+                            {/* disabled={!capchaValue} */}
                             <IoLogIn size={30} className="ml-2" />
                             <span>Iniciar Sesión</span>
                         </button>
                     </div>
-                    <ReCaptcha
+                    {/* <ReCaptcha
                         sitekey="6LcTNXkoAAAAAHrOzwQbZzwLf88c5V4vVrKmOjzI"
                         onChange={(value) => setCapchaValue(value)}
                         style={{ maxWidth: "100%" }}
-                    />
+                    /> */}
                 </form>
                 <div className="text-center">
                     <p className="flex gap-x-2 justify-between pt-5 mt-5 font-bold">¿No tienes una cuenta?

@@ -4,7 +4,7 @@ import { IoAddCircle, IoLogIn, IoLogOut, IoPerson, IoPersonAdd, IoFilter, IoFilt
 import { FaRobot } from "react-icons/fa";
 import { useState } from "react";
 
-import logo1 from "../img/Logo1.png";
+//import logo1 from "../img/Logo1.png";
 
 function Navbar() {
     const { isAuthenticated, logout } = useAuth();
@@ -23,7 +23,7 @@ function Navbar() {
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div className="text-white mb-4 md:mb-0">
                     <Link to={isAuthenticated ? "/CuestionarioTag" : "/"} className="text-white text-2xl font-bold flex items-center">
-                        <img src={logo1} alt="SerenityNow Logo" className="w-8 h-auto mr-2" />
+                        {/* <img src={logo1} alt="SerenityNow Logo" className="w-8 h-auto mr-2" /> */}
                         SerenityNow
                     </Link>
 
