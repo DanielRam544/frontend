@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { IoLogIn, IoPersonAdd, IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
-//import ReCaptcha from "react-google-recaptcha";
+import ReCaptcha from "react-google-recaptcha";
 
 // Importa la imagen que desees utilizar
 import logo1 from "../img/Logo1.png";
@@ -13,7 +13,7 @@ function LoginPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signin, isAuthenticated, errors: signInErrors } = useAuth();
     const [passwordShown, setPasswordShown] = useState(false);
-    //const [capchaValue, setCapchaValue] = useState(null);
+    const [capchaValue, setCapchaValue] = useState(null);
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
@@ -86,17 +86,16 @@ function LoginPage() {
                     <div>
                         <button
                             className="w-full bg-transparent hover:bg-slate-600 text-sky-500 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent flex items-center justify-center filter grayscale"
-                            type="submit">
-                            {/* disabled={!capchaValue} */}
+                            type="submit" disabled={!capchaValue}>
                             <IoLogIn size={30} className="ml-2" />
                             <span>Iniciar Sesión</span>
                         </button>
                     </div>
-                    {/* <ReCaptcha
-                        sitekey="6LcTNXkoAAAAAHrOzwQbZzwLf88c5V4vVrKmOjzI"
+                    <ReCaptcha
+                        sitekey="6Ldz1agoAAAAAEA_h-tTB3Rlnc2ZL6SleAsraTgf"
                         onChange={(value) => setCapchaValue(value)}
                         style={{ maxWidth: "100%" }}
-                    /> */}
+                    />
                 </form>
                 <div className="text-center">
                     <p className="flex gap-x-2 justify-between pt-5 mt-5 font-bold">¿No tienes una cuenta?
