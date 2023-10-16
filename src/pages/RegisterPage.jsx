@@ -7,7 +7,7 @@ import { IoPersonAdd } from "react-icons/io5";
 import { useState } from "react";
 import ReCaptcha from "react-google-recaptcha";
 
-import logo1 from "../img/logo1.png";
+import logo1 from "../img/Logo1.png";
 
 function RegisterPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
