@@ -4,7 +4,7 @@ import { IoAddCircle, IoLogIn, IoLogOut, IoPerson, IoPersonAdd, IoFilter, IoFilt
 import { FaRobot } from "react-icons/fa";
 import { useState } from "react";
 
-import logo1 from "../img/logo1.png";
+import logo1 from "../img/Logo1.png";
 
 function Navbar() {
     const { isAuthenticated, logout } = useAuth();
