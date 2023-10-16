@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-image: url('../src/img/Fondo7.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color:white;
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 60%; /* Asegurar que ocupe toda la altura del contenedor */
+}
+
+.image-container img {
+  max-width: 30%; /* Asegurar que la imagen no se desborde */
+  max-height: 30%; /* Asegurar que la imagen no se desborde */
+  object-fit: contain; /* Ajustar la imagen al contenedor sin distorsión */
+}
+
+
+.content-container {
+  margin-top: 80px; /* Ajusta la altura según tu barra de navegación */
+}
