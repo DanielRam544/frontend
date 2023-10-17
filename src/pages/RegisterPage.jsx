@@ -90,7 +90,7 @@ function RegisterPage() {
                         </button>
                     </div>
                     <ReCaptcha
-                        sitekey="6Ldz1agoAAAAAEA_h-tTB3Rlnc2ZL6SleAsraTgf"
+                        sitekey="6Lfc4agoAAAAABV-RAumbJd_7o2oHUAGN9fFBphH"
                         onChange={(value) => setCaptchaValue(value)}
                         style={{ maxWidth: "100%" }}
                     />
