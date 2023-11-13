@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { IoAddCircle, IoLogIn, IoLogOut, IoPerson, IoPersonAdd, IoFilter, IoFilterCircle } from "react-icons/io5";
+import { IoAddCircle, IoLogIn, IoLogOut, IoPerson, IoPersonAdd, IoFilter, IoFilterCircle, IoHomeOutline, IoSearch } from "react-icons/io5";
 import { FaRobot } from "react-icons/fa";
 import { useState } from "react";
 
@@ -34,12 +34,15 @@ function Navbar() {
                 </button>
 
                 <ul className={`${menuOpen ? "block" : "hidden"} md:flex md:flex-row md:space-x-4 md:space-y-0 mt-4 md:mt-0 md:ml-4`}>
+                    <NavItem to={isAuthenticated ? "/" : "/"} icon={<IoHomeOutline />} label="Inicio" />
                     <NavItem to={isAuthenticated ? "/ChatPage" : "/"} icon={<FaRobot />} label="Chat" />
-                    <NavItem to={isAuthenticated ? "/TipsPage" : "/"} icon={<IoPerson />} label="Consejos TAG" />
+                    <NavItem to={isAuthenticated ? "/TipsPage" : "/"} icon={<IoSearch />} label="Consejos TAG" />
+
+
 
                     {isAuthenticated ? (
                         <>
-                            <NavItem to="/add-product" icon={<IoAddCircle />} label="Agregar Producto" />
+                            <NavItem to="/Sugerencias" icon={<IoAddCircle />} label="Sugerencias" />
                             <LogoutButton onLogout={logout} />
                         </>
                     ) : (

@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import ChatPage from "./pages/ChatPage";
 import TipsPage from "./pages/TipsPage";
 import CuestionarioTag from "./pages/CuestionarioTag";
+import Sugerencias from "./pages/Sugerencias";
+
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
                 <Route path='/ChatPage' element={<ChatPage />} />
                 <Route path="/TipsPage" element={<TipsPage />} />
                 <Route path="/CuestionarioTag" element={<CuestionarioTag />} />
+                <Route path="/Sugerencias" element={<Sugerencias />} />
               </Route>
 
               {/* Rutas para el 404*/}
