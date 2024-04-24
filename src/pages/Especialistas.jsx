@@ -1,6 +1,6 @@
 import React from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
-import Saptel from "../img/saptel.png";
+import SAPTEL from "../img/SAPTEL.png";
 import Vivetel from "../img/vivetel.png";
 import HFray from "../img/HFray.png";
 import EMA from "../img/EMA.png";
@@ -17,7 +17,7 @@ function Especialistas() {
     const tips = [
         {
             id: 1,
-            original: Saptel,
+            original: SAPTEL,
             title: "Consejería SAPTEL",
             description:
                 "El Sistema Nacional de Apoyo, Consejo Psicológico e Intervención en Crisis por Teléfono, ofrece un servicio de terapia psicológica gratuita facilitada por psicólogos certificados.",
