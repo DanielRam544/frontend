@@ -47,7 +47,7 @@ function RegisterPage() {
                             type="text"
                             id="username"
                             name="username"
-                            className="w-full background-text-input text-white px-4 py-2 rounded-md my-2"
+                            className="w-full background-text-input text-black px-4 py-2 rounded-md my-2"
                             placeholder="Usuario"
                             {...register("username", { required: true, minLength: 5 })}
                         />
@@ -62,7 +62,7 @@ function RegisterPage() {
                             type="email"
                             id="email"
                             name="email"
-                            className="w-full background-text-input text-white px-4 py-2 rounded-md my-2"
+                            className="w-full background-text-input text-black px-4 py-2 rounded-md my-2"
                             placeholder="Correo electrónico"
                             {...register("email", { required: true })}
                         />
@@ -72,7 +72,7 @@ function RegisterPage() {
                             type="password"
                             id="password"
                             name="password"
-                            className="w-full background-text-input text-white px-4 py-2 rounded-md my-2"
+                            className="w-full background-text-input text-black px-4 py-2 rounded-md my-2"
                             placeholder="Contraseña"
                             {...register("password", { required: true, minLength: 6 })}
                         />

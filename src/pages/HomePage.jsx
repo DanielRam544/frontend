@@ -7,26 +7,23 @@ function HomePage() {
     >
       <div className="w-full items-center mx-auto max-w-screen-lg">
         <div className="group grid w-full grid-cols-2">
-          <div className="pl-16 relative flex items-end flex-col before:block before:absolute before:h-1/6 before:w-4 before:bg-blue-500 before:bottom-0 before:left-0 before:rounded-lg  before:transition-all group-hover:before:bg-blue-300 overflow-hidden">
-            <div className="absolute top-0 left-0 bg-blue-500 w-4/6 px-12 py-14 flex flex-col justify-center rounded-xl group-hover:bg-blue-600 transition-all ">
-              <span className="block mb-10 font-bold group-hover:text-blue-300">AQUÍ ESTAMOS</span>
+          <div className="pl-16 relative flex items-end flex-col before:block before:absolute before:h-1/6 before:w-4 before:bg-green-50 before:bottom-0 before:left-0 before:rounded-lg  before:transition-all ">
+            <div className="absolute top-0 left-0 background-fount w-4/6 px-12 py-14 flex flex-col justify-center rounded-xl ">
+              <span className="block mb-10 font-bold ">AQUÍ ESTAMOS</span>
               <h2 className="text-white font-bold text-3xl">
-                "Encuentra calma en cada clic: Juntos contra la ansiedad."
+                "Encuentra calma en cada click: Juntos contra la ansiedad."
               </h2>
             </div>
             <a className="font-bold text-sm flex mt-2 mb-8 items-center gap-2" href="/register">
-              <span>MÁS AQUI</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
+
             </a>
             <div className="rounded-xl overflow-hidden">
               <img src="https://picsum.photos/800/800" alt="" />
             </div>
           </div>
           <div>
-            <div className="pl-12">
-              <h1 className='mb-4 font-bold'>
+            <div className="pl-12 background-fount ml-6 background-fount rounded-xl px-10 py-10">
+              <h1 className='mb-4'>
                 Bienvenido a nuestra página web de apoyo para el Trastorno de Ansiedad Generalizada (TAG)
               </h1>
               <p className="peer mb-6 text-white">
