@@ -41,7 +41,7 @@ function Sugerencias() {
     return (
         <div style={backgroundStyle} className="container mt-4 bg-black rounded-lg border-4 border-stone-800">
             <h1 className="text-center text-4xl font-bold mb-4">
-                Sugerencias para el TAG
+                SUGERENCIAS PARA EL TRASTORNO DE ANSIEDAD GENERALIZADA
             </h1>
             <div className="flex flex-wrap">
                 {suggestions.map((suggestion) => (

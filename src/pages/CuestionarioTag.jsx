@@ -8,38 +8,43 @@ class CuestionarioTAG extends Component {
             score: 0,                   // Puntaje acumulado
             questions: [                // Matriz de preguntas y opciones
                 {
-                    question: 'Sentirse nervioso, ansioso, notar que se le ponen los nervios de punta.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me preocupo demasiado por cosas sin importancia.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],  // Puntajes correspondientes a las opciones
                 },
                 {
-                    question: 'No ser capaz de parar o controlar sus preocupaciones.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me rondan y molestan pensamientos normalmente negativos que no puedo controlar.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
                 {
-                    question: 'Preocuparse demasiado sobre diferentes cosas.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me afectan los desengaños tanto que no puedo olvidarlos.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
                 {
-                    question: 'Dificultad para relajarse.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Suelo tomar las cosas demasiado seriamente.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
                 {
-                    question: 'Estar tan desasosegado que le resulta difícil parar quieto.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me siento tenso o alterado la mayor parte del tiempo.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
                 {
-                    question: 'Sentirse fácilmente disgustado o irritable.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me preocupo ahora por desgracias futuras que pienso que es posible que pasen',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
                 {
-                    question: 'Sentirse asustado como si algo horrible pudiese pasar.',
-                    options: ['Nunca', 'Varios días', 'La mitad de los días', 'Casi cada día'],
+                    question: 'Me siento contrariado porque realizo cosas que no me gustan.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
+                    scores: [0, 1, 2, 3],
+                },
+                {
+                    question: 'Me siento normalmente atado u oprimido.',
+                    options: ['Nada = 0', 'Algo = 1', 'Bastante = 2', 'Mucho = 3'],
                     scores: [0, 1, 2, 3],
                 },
             ],

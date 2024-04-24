@@ -59,7 +59,6 @@ export function ProductsProvider({ children }) {
             const res = await getProductRequest(id);
             console.log(res);
         } catch (error) {
-            console.log('Hola muchachon');
             console.log(error);
         }
     }

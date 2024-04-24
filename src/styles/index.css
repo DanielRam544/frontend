@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 body{
-  background-image: url('../src/img/Fondo7.png');
+  /* background-image: url('../src/img/fondoColores.png'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color:white;
+  /* background-color: rgb(136, 275, 273); */
+  background-image: linear-gradient(180deg, rgb(126, 191, 185), rgb(213, 242, 242) );
 }
-
 
 .image-container {
   display: flex;
@@ -27,4 +28,24 @@ body{
 
 .content-container {
   margin-top: 80px; /* Ajusta la altura según tu barra de navegación */
+}
+
+.background-text-input {
+  background-color: #D5F2F2;
+}
+
+.background-button {
+  background-color:#6FBFA2 ;
+}
+
+.background-button-green {
+  background-color: #5E8C88;
+}
+
+.background-text-green {
+  color: #5E8C88;
+}
+
+.background-button-gre {
+  background-color: #7ebfb981;
 }

@@ -4,16 +4,14 @@ import LoginPage from "./pages/LoginPage";
 import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
-import ProductsPage from "./pages/ProductsPage";
-import ProductsFormPage from "./pages/ProductsFormPage";
 import ProtectedRoute from "./ProtectedRoute";
 import { ProductsProvider } from "./context/ProductsContext";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
-import ChatPage from "./pages/ChatPage";
 import TipsPage from "./pages/TipsPage";
 import CuestionarioTag from "./pages/CuestionarioTag";
 import Sugerencias from "./pages/Sugerencias";
+import Especialistas from "./pages/Especialistas";
 
 
 function App() {
@@ -31,11 +29,11 @@ function App() {
               {/* Rutas a las que sól se podrá accesar cuando se inicio sesión */}
               <Route element={<ProtectedRoute />}>
                 <Route path='/profile' element={<ProfilePage />} />
-                <Route path='/products' element={<ProductsPage />} />
-                <Route path='/add-product' element={<ProductsFormPage />} />
-                <Route path='/products/:id' element={<ProductsFormPage />} />
-                <Route path='/ChatPage' element={<ChatPage />} />
+                {/* <Route path='/products' element={<ProductsPage />} /> */}
+                {/* <Route path='/add-product' element={<ProductsFormPage />} /> */}
+                {/* <Route path='/products/:id' element={<ProductsFormPage />} /> */}
                 <Route path="/TipsPage" element={<TipsPage />} />
+                <Route path="/Especialistas" element={<Especialistas />} />
                 <Route path="/CuestionarioTag" element={<CuestionarioTag />} />
                 <Route path="/Sugerencias" element={<Sugerencias />} />
               </Route>
