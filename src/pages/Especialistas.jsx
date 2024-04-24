@@ -11,7 +11,7 @@ import INPRF from "../img/inprf.png";
 
 function Especialistas() {
     const backgroundStyle = {
-        backgroundColor: "rgba(13, 55, 140,0.4)", // Gris con 50% de opacidad
+        backgroundColor: "rgba(21, 94, 117,0.5)", // Gris con 50% de opacidad
     };
 
     const tips = [
@@ -104,8 +104,8 @@ function Especialistas() {
             </h1>
             <div className="flex flex-wrap">
                 {tips.map((tip) => (
-                    <div key={tip.id} className="relative flex w-80 flex-col rounded-xl bg-teal-600 bg-clip-border text-gray-800 shadow-md m-4">
-                        <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    <div key={tip.id} className="relative flex w-80 flex-col rounded-xl background-text-input bg-clip-border background-text-green shadow-md m-4">
+                        <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r">
                             <img src={tip.original} alt={tip.title} className="object-cover w-full h-full" />
                         </div>
                         <div className="p-6">
@@ -123,7 +123,7 @@ function Especialistas() {
                             <a
                                 target="_blank"
                                 href={tip.buttonLink}
-                                className="select-none rounded-lg bg-cyan-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                className="select-none rounded-lg background-button-green py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             >
                                 {tip.buttonLabel}
                             </a>

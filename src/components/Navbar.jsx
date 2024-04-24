@@ -32,9 +32,7 @@ function Navbar() {
                 </button>
 
                 <ul className={`${menuOpen ? "block" : "hidden"} md:flex md:flex-row md:space-x-4 md:space-y-0 mt-4 md:mt-0 md:ml-4`}>
-                    <NavItem to={isAuthenticated ? "/" : "/"} icon={<IoHomeOutline className="text-lg" />} label="Inicio" />
-
-
+                    <NavItem to={isAuthenticated ? "/" : "/"} icon={<IoHomeOutline />} label="Inicio" />
 
                     {isAuthenticated ? (
                         <>
@@ -45,8 +43,8 @@ function Navbar() {
                         </>
                     ) : (
                         <>
-                            <NavItem to="/login" icon={<IoLogIn className="text-2xl" />} label="Iniciar Sesión" />
-                            <NavItem to="/register" icon={<IoPersonAdd className="text-lg" />} label="Registrarse" />
+                            <NavItem to="/login" icon={<IoLogIn />} label="Iniciar Sesión" />
+                            <NavItem to="/register" icon={<IoPersonAdd />} label="Registrarse" />
                         </>
                     )}
                 </ul>
@@ -56,15 +54,17 @@ function Navbar() {
 }
 
 // Componente para elementos del menú
-function NavItem({ to, icon, label, color }) {
+function NavItem({ to, icon, label }) {
     const itemStyle = {
-        color: color,
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '1.5rem', // Tamaño del icono
     };
 
     return (
         <li>
             <Link to={to} className="text-lg font-semibold flex items-center" style={itemStyle}>
-                {icon && <span className="text-lg mr-2">{icon}</span>}
+                {icon && <span className="mr-2">{icon}</span>}
                 {label}
             </Link>
         </li>
@@ -72,9 +72,11 @@ function NavItem({ to, icon, label, color }) {
 }
 
 // Componente para el botón de cierre de sesión
-function LogoutButton({ onLogout, color }) {
+function LogoutButton({ onLogout }) {
     const buttonStyle = {
-        color: color,
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: '1.5rem', // Tamaño del icono
     };
 
     return (
