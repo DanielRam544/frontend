@@ -53,3 +53,12 @@ body{
 .background-fount {
   background-color:rgba(21, 94, 117,0.5) ;
 }
+
+.text-randoom-color {
+  background: linear-gradient(90deg, #D5F2F2, #6FBFA2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* fallback for browsers that do not support background-clip */
+}
+
