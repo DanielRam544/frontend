@@ -4,7 +4,7 @@ function NotFound() {
     return (
         <div>
             {/* <h1>404 Not Found</h1> */}
-            <Navigate to="/products" replace />
+            <Navigate to="/" replace />
         </div>
     )
 }

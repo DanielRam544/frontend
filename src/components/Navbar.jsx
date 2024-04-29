@@ -13,18 +13,17 @@ function Navbar() {
     };
 
     const backgroundStyle = {
-        backgroundColor: "rgba(21, 94, 117,0.5)",
+        backgroundColor: "rgba(21, 94, 117, 0.5)",
     };
 
     return (
-        <nav style={backgroundStyle} className="rounded-lg bg-primary py-4 px-4 md:px-8 lg:px-12 ">
+        <nav style={backgroundStyle} className="rounded-lg bg-primary py-4 px-4 md:px-8 lg:px-12">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-                <div className=" mb-4 md:mb-0">
+                <div className="mb-4 md:mb-0">
                     <Link to={isAuthenticated ? "/" : "/"} className="text-white text-2xl font-bold flex items-center">
                         <img src={logo} alt="SerenityNow Logo" className="w-12 h-auto mr-2" />
                         SerenityNow
                     </Link>
-
                 </div>
 
                 <button onClick={toggleMenu} className="md:hidden text-white text-3xl focus:outline-none">
