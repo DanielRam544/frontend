@@ -29,9 +29,6 @@ function App() {
               {/* Rutas a las que sól se podrá accesar cuando se inicio sesión */}
               <Route element={<ProtectedRoute />}>
                 <Route path='/profile' element={<ProfilePage />} />
-                {/* <Route path='/products' element={<ProductsPage />} /> */}
-                {/* <Route path='/add-product' element={<ProductsFormPage />} /> */}
-                {/* <Route path='/products/:id' element={<ProductsFormPage />} /> */}
                 <Route path="/TipsPage" element={<TipsPage />} />
                 <Route path="/Especialistas" element={<Especialistas />} />
                 <Route path="/CuestionarioTag" element={<CuestionarioTag />} />
