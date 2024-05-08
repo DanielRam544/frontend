@@ -31,7 +31,6 @@ function Navbar() {
                 </button>
 
                 <ul className={`${menuOpen ? "block" : "hidden"} md:flex md:flex-row md:space-x-4 md:space-y-0 mt-4 md:mt-0 md:ml-4`}>
-                    <NavItem to={isAuthenticated ? "/Profile" : "/"} icon={<IoPerson />} label="Perfil" />
 
                     {isAuthenticated ? (
                         <>
