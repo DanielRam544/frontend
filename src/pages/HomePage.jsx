@@ -1,4 +1,5 @@
 import React from 'react';
+import socialMedia from '../img/social-media.png';
 
 function HomePage() {
   return (
@@ -78,6 +79,23 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+      <div className="container mx-auto max-w-screen-lg py-6 sm:py-12">
+        <div className="background-fount rounded-xl px-6 sm:px-10 py-8 sm:py-10 flex flex-col items-center sm:flex-row sm:items-start">
+          <img src={socialMedia} className="max-w-full h-auto mb-4 sm:mr-4 sm:mb-0" style={{ maxWidth: '400px' }} />
+          <div>
+            <h2 className='mb-4 font-semibold text-xl sm:text-2xl lg:text-3xl text-white'>
+              PORCENTAJE DE ADOLESCENTES DEPRIMIDOS EN FUNCIÓN DE LAS HORAS SEMANALES QUE PASAN EN LAS REDES SOCIALES
+            </h2>
+            <p>Porcentaje de adolescentes del Reino Unido con síntomas depresivos “clínicamente relevantes” por horas por día laborable de uso de las redes sociales, incluidos los controles. Haidt y Twenge crearon este gráfico a partir de los datos dados en la Tabla 2 de Kelly, Zilanawala, Booker y Sacker (2019).</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
 
       <div className="absolute bottom-0 left-0 right-0 flex justify-center py-4 text-black text-sm">
         <span>© 2021 SerenityNow. Todos los derechos reservados.</span>
