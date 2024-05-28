@@ -10,9 +10,8 @@ function RegisterPage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signup, isAuthenticated, errors: registerErrors } = useAuth();
     const navigate = useNavigate();
-
+    const [loading, setLoading] = useState(false);
     const [captchaValue, setCaptchaValue] = useState(null);
-    const [captchaFilled, setCaptchaFilled] = useState(false);
 
     useEffect(() => {
         if (isAuthenticated) navigate('/');
@@ -23,7 +22,16 @@ function RegisterPage() {
             alert("Por favor, completa el captcha.");
             return;
         }
-        signup(values);
+
+        setLoading(true); // Inicia la animación de carga
+
+        try {
+            await signup(values); // Realiza la acción de registro
+        } catch (error) {
+            console.error("Error en el envío:", error);
+        } finally {
+            setLoading(false); // Detiene la animación de carga después de la acción
+        }
     });
 
     const backgroundStyle = {
@@ -36,7 +44,7 @@ function RegisterPage() {
                 <div style={backgroundStyle} className="bg-zinc-800 max-w-md p-5 rounded-md w-full md:w-1/2 text-center">
                     <h1 className="text-2xl font-bold mb-4">Registro</h1>
                     <img src={logo} alt="Logo" className="w-60 h-auto mx-auto mb-0" />
-                    {registerErrors.map((error, i) => (
+                    {registerErrors && registerErrors.length > 0 && registerErrors.map((error, i) => (
                         <div className="bg-red-500 p-2 my-2 text-white" key={i}>
                             {error}
                         </div>
@@ -86,27 +94,18 @@ function RegisterPage() {
                         <div className="flex items-center justify-center mt-4">
                             <ReCaptcha
                                 sitekey="6Lfc4agoAAAAABV-RAumbJd_7o2oHUAGN9fFBphH"
-                                onChange={(value) => {
-                                    setCaptchaValue(value);
-                                    if (value) {
-                                        setCaptchaFilled(true);
-                                    } else {
-                                        setCaptchaFilled(false);
-                                    }
-                                }}
+                                onChange={setCaptchaValue}
                                 style={{ maxWidth: "100%" }}
                             />
                         </div>
-                        {/* Mensaje de captcha no llenado */}
-                        {!captchaFilled && (
+                        {!captchaValue && (
                             <p className="text-red-500 mt-2 text-lg">Por favor, completa el captcha.</p>
                         )}
 
-                        {/* Boton de registro */}
                         <div className="w-full flex items-center justify-center mt-4">
                             <button
                                 type="submit"
-                                disabled={!captchaValue}
+                                disabled={!captchaValue || loading}
                                 className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow background-button-gre transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 dark:bg-cyan-100 dark:text-black dark:hover:text-gray-200 dark:shadow-none group"
                             >
                                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out background-button-gre group-hover:h-full"></span>
@@ -121,10 +120,7 @@ function RegisterPage() {
                                 </span>
                             </button>
                         </div>
-                        {/* Fin del boton de registro */}
-
                     </form>
-                    {/* Enlace de inicio de sesión */}
                     <div className="w-full flex items-center justify-center mt-4">
                         <Link to="/login" className="text-white font-semibold hover:underline">¡Ya tengo una cuenta!</Link>
                     </div>
