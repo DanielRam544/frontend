@@ -99,12 +99,12 @@ function Especialistas() {
 
     return (
         <div style={backgroundStyle} className="container mt-4 bg-black rounded-lg">
-            <h1 className="text-center text-4xl font-bold mb-4 pt-6 pb-6">
+            <h1 className="text-center text-2xl md:text-4xl font-bold mb-4 pt-6 pb-6">
                 LÍNEAS TELEFÓNICAS DE ATENCIÓN PSICOLÓGICA
             </h1>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center">
                 {tips.map((tip) => (
-                    <div key={tip.id} className="relative flex w-80 flex-col rounded-xl background-text-input bg-clip-border background-text-green shadow-md m-4">
+                    <div key={tip.id} className="relative flex flex-col rounded-xl background-text-input bg-clip-border background-text-green shadow-md m-4 w-full sm:w-80">
                         <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r">
                             <img src={tip.original} alt={tip.title} className="object-cover w-full h-full" />
                         </div>
@@ -133,8 +133,8 @@ function Especialistas() {
                 ))}
             </div>
         </div>
-
     );
+    
 }
 
 export default Especialistas;
