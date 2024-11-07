@@ -108,7 +108,7 @@ class CuestionarioMultiTest extends Component {
                                 onClick={() => this.changeTest(testName)}
                                 className={`mr-2 py-2 px-4 rounded hover:bg-blue-700 transition duration-300 text-white ${currentTest === testName ? 'bg-blue-700 font-semibold' : 'background-button-green'}`}
                             >
-                                {testName === 'TAG' ? 'TAG (Ansiedad)' : 'DEPRESSION (Depresión)'}
+                                {testName === 'TAG' ? 'ANSIEDAD' : 'DEPRESIÓN'}
                             </button>
                         ))}
                     </div>
